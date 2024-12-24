@@ -1,0 +1,24 @@
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { LineChart } from 'react-native-chart-kit';
+
+const NetBalance = ({ balanceData }) => {
+  return (
+    <View style={styles.container}>
+      <LineChart
+        data={balanceData}
+        width={300}
+        height={200}
+        chartConfig={{
+          backgroundColor: '#ffffff',
+          backgroundGradientFrom: '#ffffff',
+          backgroundGradientTo: '#ffffff',
+          decimalPlaces: 2,
+          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+        }}
+      />
+    </View>
+  );
+};
+
+export default NetBalance;
